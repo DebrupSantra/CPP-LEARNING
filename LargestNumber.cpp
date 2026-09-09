@@ -9,16 +9,6 @@ public:
             arr.push_back(to_string(x));
         }
 
-        // 2) Custom sort rule (core of the problem):
-        //    For two strings a and b, we compare a+b vs b+a.
-        //    Example:
-        //      a = "9", b = "34"
-        //      a+b = "934", b+a = "349"
-        //      Since "934" > "349", "9" must come before "34".
-        //
-        //    Why this works:
-        //    We are deciding local order of every pair so the final concatenation
-        //    is globally maximum.
         sort(arr.begin(), arr.end(),
              [](const string& a, const string& b) {
                  // If placing a before b creates a larger combined value,

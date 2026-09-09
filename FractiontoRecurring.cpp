@@ -50,4 +50,4 @@ public:
 
         return ans+frac;
     }
-};
+};C
